@@ -1,0 +1,61 @@
+<!--
+ * @Author: Feeei
+ * @Date: 2023-03-27 21:24:36
+ * @LastEditTime: 2023-03-27 21:24:48
+ * @FilePath: /出校码/fanxiao.html
+ * 
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>齐鲁理工学院扫码通行</title>
+	<style>
+		body {
+			background-color: #ffffff;
+			margin: 0; /* 添加这一行 */
+		}
+		.title {
+			background-color: #f8f8f8;
+			padding: 10px;
+			text-align: center;
+			font-size: calc(5vw + 8px); /* 修改这一行 */
+			box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+			margin: 0;
+			margin-top: 0px;
+			border-bottom: 1px solid #ccc;
+			font-weight: normal; /* 添加这一行 */
+		}
+		.image {
+			display: block;
+			margin: 20px auto 5px; /* 修改这一行 */
+			max-width: 90%;
+			height: auto;
+			padding: 0;
+			box-shadow: none;
+		}
+		.time {
+			text-align: center;
+			font-size: calc(5vw + 15px); /* 修改这一行 */
+			padding: 10px;
+			margin: 0;
+			max-width: 90%; /* 添加这一行 */
+			margin-top: 5px; /* 修改这一行 */
+		}
+	</style>
+</head>
+<body>
+	<div class="title">报备返校通道</div>
+	<img class="image" src="duihao.png" alt="image">
+	<div class="time" id="datetime"></div>
+	<script>
+		function updateTime() {
+			var now = new Date();
+			var datetime = document.getElementById('datetime');
+			datetime.innerHTML = now.toLocaleString('zh-CN', { hour12: false, hourCycle: 'h23' }).replace(/\//g, "-");
+		}
+		setInterval(updateTime, 1000);
+	</script>
+</body>
+</html>
