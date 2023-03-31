@@ -8,12 +8,13 @@
 
  * @Author: Feeei
  * @Date: 2023-03-25 22:11:20
- * @LastEditTime: 2023-03-31 11:01:18
+ * @LastEditTime: 2023-03-31 20:28:25
  * @FilePath: /出校码/test.html
  * 
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,6 +25,7 @@
             background-color: #f2f2f2;
             font-family: Arial, sans-serif;
         }
+
         .center {
             text-align: center;
         }
@@ -67,6 +69,7 @@
             height: 100%;
             background-color: #4CAF50;
         }
+
         .loader {
             border: 16px solid #f3f3f3;
             border-top: 16px solid #4CAF50;
@@ -80,17 +83,25 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
+
 <body>
     <h1 class="center">请选择功能</h1>
     <hr>
     <div class="center">
-        <button class="bt" onclick="showLoader(); new Audio('/music.mp3').play(); setTimeout(function(){window.location.href='chuxiao/index.html'}, 800)">出校</button>
-        <button class="bt" onclick="showLoader(); new Audio('/music.mp3').play(); setTimeout(function(){window.location.href='fanxiao/index.html'}, 800)">返校</button>
+        <button class="bt"
+            onclick="showLoader(); new Audio('/music.mp3').play(); setTimeout(function(){window.location.href='chuxiao/index.html'}, 800)">出校</button>
+        <button class="bt"
+            onclick="showLoader(); new Audio('/music.mp3').play(); setTimeout(function(){window.location.href='fanxiao/index.html'}, 800)">返校</button>
     </div>
     <div class="disclaimer" style="padding: 0 20px;">
         <p>免责声明：本网站仅供学习交流使用，不得用于商业用途，如有侵权请联系作者删除</p>
@@ -119,4 +130,5 @@
         document.getElementById("loader").style.display = "block";
     }
 </script>
+
 </html>
